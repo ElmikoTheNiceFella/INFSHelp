@@ -1,0 +1,24 @@
+[
+  {
+    "question": "What is the output of the following code?",
+    "code": "print(\"Hello World\")",
+    "answers": [
+      "Hello World",
+      "World Hello",
+      "Tings Mad",
+      "Mad tings"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "What is the output of the following code?",
+    "code": "print(\"Mad tings\")",
+    "answers": [
+      "Hello World",
+      "World Hello",
+      "Tings Mad",
+      "Mad tings"
+    ],
+    "correctAnswer": 4
+  }
+]

@@ -1,0 +1,115 @@
+.main {
+  background-color: #EADBC8;
+  min-height: 100dvh;
+  display: flex;
+  padding-bottom: 24px;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+.startQuiz {
+  all: unset;
+  cursor: pointer;
+  text-align: center;
+  background-color: #102C57;
+  color: #FEFAF6;
+  font-size: 24px;
+  width: 200px;
+  height: 75px;
+}
+.numberOfQuestions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 12px;
+  gap: 12px;
+}
+.numberOfQuestions > div {
+  display: flex;
+  gap: 10px;
+}
+.numberOfQuestions > div > button {
+  all: unset;
+  cursor: pointer;
+  text-align: center;
+  background-color: #102C57;
+  color: #FEFAF6;
+  font-size: 16px;
+  width: 75px;
+  height: 50px;
+}
+.timer {
+  position: absolute;
+  right: 0;
+  font-size: 36px;
+  color: #102C57;
+  border-bottom: 3px solid #102C57;
+  border-left: 3px solid #102C57;
+  width: 200px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.question {
+  color: #102C57;
+  font-size: 32px;
+  padding: 10px 0px;
+}
+.answer, .nextQuestion {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #102C57;
+  color: #FEFAF6;
+  display: flex;
+  width: 350px;
+  align-items: center;
+  padding-left: 12px;
+  gap: 12px;
+}
+.answer :first-child {
+  width: 50px;
+  text-align: center;
+  font-size: 24px;
+}
+.line {
+  width: 2px;
+  height: 50px;
+  background-color: #EADBC8;
+}
+.answer :last-child {
+  font-size: 18px;
+}
+.nextQuestion {
+  height: 50px;
+  justify-content: center;
+  padding-left: 0;
+}
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 1200px) {
+  .result {
+    width: 80%;
+  }
+  .question {
+    width: 80%;
+  }
+  .timer {
+    position: static;
+    border-left: none;
+    width: 100%;
+    background-color: #FEFAF6;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 50px;
+    font-size: 24px;
+  }
+}

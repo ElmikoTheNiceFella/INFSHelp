@@ -66,12 +66,11 @@ function App() {
           correctAnswer={question.correctAnswer} />}
         {/* styles, score, numberOfQuestions, timer, handleStop, handleRestart */}
         {isStarted && hasEnded && <Result
-          styles={styles}
-          score={score}
-          numberOfQuestions={numberOfQuestions}
-          timer={timer}
-          handleStop={handleEnd}
-          handleRestart={handleStop}
+                                    score={score}
+                                    numberOfQuestions={numberOfQuestions}
+                                    timer={timer}
+                                    handleStop={handleEnd}
+                                    handleRestart={handleStop}
         />}
         {!hasEnded && <button type='button' onClick={isStarted ? handleStop : handleStart} className={styles.startQuiz}>{isStarted ? "Stop" : "Start"} Quiz</button>}
         {!isStarted && (

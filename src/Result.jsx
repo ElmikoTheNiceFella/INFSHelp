@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import styles from './App.module.css'
 
-const Result = ({ styles, score, numberOfQuestions, timer, handleStop, handleRestart }) => {
+const Result = ({ score, numberOfQuestions, timer, handleStop, handleRestart }) => {
 
   useEffect(() => {
     handleStop()

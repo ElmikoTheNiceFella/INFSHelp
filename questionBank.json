@@ -20,5 +20,16 @@
       "Mad tings"
     ],
     "correctAnswer": 4
+  },
+  {
+    "question": "What is the output of the below program if the user enters 11?",
+    "code": "num=int(input(\"Enter a whole number: \"))\nif num%2 == 0:\n\tprint(\"Remainder of\",num,\"modulo 2 is 0\")\n\tprint(num,\"is an even number.\")\nelse:\n\tprint(\"Remainder of\",num,\"modulo 2 is 1\")\n\tprint(num,\"is an odd number.\")\nprint(\"Thank you\")",
+    "answers": [
+      "Remainder of 11 modulo 2 is 0\n11 is an even number\nThank you",
+      "Remainder of 11 modulo 2 is 1\n11 is an even number\nThank you",
+      "Remainder of 11 modulo 2 is 1\n11 is an odd number\nThank you",
+      "Remainder of 11 modulo 2 is 0\n11 is an odd number\nThank you"
+    ],
+    "correctAnswer": 3
   }
 ]

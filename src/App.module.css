@@ -20,6 +20,7 @@
 }
 .numberOfQuestions {
   display: flex;
+  color: #102C57;
   justify-content: center;
   align-items: center;
   flex-direction: column;

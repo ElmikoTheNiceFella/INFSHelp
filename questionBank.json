@@ -73,5 +73,38 @@
       "LOO"
     ],
     "correctAnswer": 4
+  },
+  {
+    "question": "Which data types are not allowed as keys in a dictionary?",
+    "code": "",
+    "answers": [
+      "Lists and Floats",
+      "Tuples and Integers",
+      "Lists Only",
+      "Lists and Sets"
+    ],
+    "correctAnswer": 4
+  },
+  {
+    "question": "What is the output of the following code?",
+    "code": "l = []\ndef x(y):\n\tif y == -1:\n\t\treturn 7\n\tnum = y % 2\n\tl.append(x(y-1))\n\treturn num\nstring = \"Python\"\nx(3)\nprint(string[len(l)//2])",
+    "answers": [
+      "Error",
+      "P",
+      "t",
+      "o"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "question": "What is the missing code that makes the program output 10?",
+    "code": "merchants = {\n\t\"Abdelhakim\": {\n\t\t\"number of peaches\": len([[10]*3]*5),\n\t\t\"number of apples\": 26",
+    "answers": [
+      "merchants[\"number of peaches\"] * 2",
+      "merchants[\"Abdelhakim\"][\"number of apples\"] % 16",
+      "merchants[\"Abdelhakim\"][\"number of peaches\"] ** 2",
+      "merchants[\"Abdelhakim\"][\"number of apples\"] / 2.6"
+    ],
+    "correctAnswer": 2
   }
 ]

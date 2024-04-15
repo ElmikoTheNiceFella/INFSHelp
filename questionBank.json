@@ -1,25 +1,14 @@
 [
   {
     "question": "What is the output of the following code?",
-    "code": "print(\"Hello World\")",
+    "code": "print(\"Hello\", \"World\", sep=\"\\100\")",
     "answers": [
-      "Hello World",
-      "World Hello",
-      "Tings Mad",
-      "Mad tings"
+      "Hello100World",
+      "Hello@World",
+      "HellodWorld",
+      "Hello World"
     ],
     "correctAnswer": 1
-  },
-  {
-    "question": "What is the output of the following code?",
-    "code": "print(\"Mad tings\")",
-    "answers": [
-      "Hello World",
-      "World Hello",
-      "Tings Mad",
-      "Mad tings"
-    ],
-    "correctAnswer": 4
   },
   {
     "question": "What is the output of the program below if the user enters 11?",
@@ -31,5 +20,58 @@
       "Remainder of 11 modulo 2 is 0\n11 is an odd number\nThank you"
     ],
     "correctAnswer": 3
+  },
+  {
+    "question": "What is the output of the following code?",
+    "code": "def x(n):\n\tif n == 0:\n\t\treturn 2\n\treturn x(n-1)**2\n\nprint(x(3))",
+    "answers": [
+      "8",
+      "256",
+      "6",
+      "27"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "Which algorithm has a better time complexity when l = [1,2,3] and y = 2?",
+    "code": "# Function 1\ndef f(l,y):\n\tfor i in l:\n\t\tif i == y:\n\t\t\tprint(f\"Found {y}\")\n\t\t\treturn\n\tprint(f\"{y} Not found\")\n# Function 2\ndef g(l,y):\n\tleft = 0\n\tright = len(l)- 1\n\twhile left <= right:\n\t\tmid = (left + right) // 2\n\t\tif y == l[mid]:\n\t\t\tprint(f\"Found {y}\")\n\t\t\treturn\n\t\telif y < l[mid]:\n\t\t\tright = mid - 1\n\t\telse:\n\t\t\tleft = mid + 1\n\tprint(f\"{y} Not found\")",
+    "answers": [
+      "f(l, y)",
+      "g(l, y)",
+      "both have the same complexity"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "Which algorithm has a better Big O time complexity?",
+    "code": "# Function 1\ndef f(l,y):\n\tfor i in l:\n\t\tif i == y:\n\t\t\tprint(f\"Found {y}\")\n\t\t\treturn\n\tprint(f\"{y} Not found\")\n# Function 2\ndef g(l,y):\n\tleft = 0\n\tright = len(l)- 1\n\twhile left <= right:\n\t\tmid = (left + right) // 2\n\t\tif y == l[mid]:\n\t\t\tprint(f\"Found {y}\")\n\t\t\treturn\n\t\telif y < l[mid]:\n\t\t\tright = mid - 1\n\t\telse:\n\t\t\tleft = mid + 1\n\tprint(f\"{y} Not found\")",
+    "answers": [
+      "f(l, y)",
+      "g(l, y)",
+      "both have the same complexity"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "What is the time complexity of this algorithm?",
+    "code": "def f(x):\n\tresult = []\n\tfor i in range(x):\n\t\tresult.append(i)\n\tfor j in range(x):\n\t\tresult[j] *= j\n\treturn result",
+    "answers": [
+      "O(2n)",
+      "O(n^2)",
+      "O(n)",
+      "O(3n)"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "question": "What is the output of the following code?",
+    "code": "# final.txt:\n#MA9LOOBA\ndef f(f):\n\tf.read(1)\n\tf.read(2)\n\treturn f.read(3)\nprint(f(open(\"final.txt\")",
+    "answers": [
+      "MA9",
+      "OBA",
+      "Mohamed Salah Amine BENOUAR",
+      "LOO"
+    ],
+    "correctAnswer": 4
   }
 ]

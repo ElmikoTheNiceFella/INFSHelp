@@ -13,6 +13,7 @@ function App() {
   const [isStarted, setIsStarted] = useState(false)
   const [hasEnded, setHasEnded] = useState(false)
 
+  const [questionsIndexes, setQuestionsIndexes] = useState([])
   const [question, setQuestion] = useState(questionBank[0])
   const [score, setScore] = useState(0)
   const [totalScore, setTotalScore] = useState(0)
@@ -37,9 +38,26 @@ function App() {
 
 
   const generateQuestion = () => {
-    const randomIndex = Math.floor(Math.random() * questionBank.length)
-    setQuestion(questionBank[randomIndex])
+    console.log(questionsIndexes[0])
+    setQuestion(questionBank[questionsIndexes[0]])
+    setQuestionsIndexes((p) => p.slice(1))
   }
+
+  useEffect(() => {
+    setQuestionsIndexes(() => {
+      let arr = []
+      // Generate indexes
+      for (let i = 1; i < questionBank.length; i++) arr.push(i)
+      // Shuffle
+      let currentIndex = arr.length;
+      while (currentIndex != 0) {
+        let randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [arr[currentIndex], arr[randomIndex]] = [arr[randomIndex], arr[currentIndex]]
+      }
+      return arr
+    })
+  }, [])
 
   useEffect(() => {
     const timerInterval = setInterval(() => { if (isStarted && !hasEnded) setTimer(t => t + 1) }, 1000)
@@ -66,14 +84,14 @@ function App() {
           correctAnswer={question.correctAnswer} />}
         {/* styles, score, numberOfQuestions, timer, handleStop, handleRestart */}
         {isStarted && hasEnded && <Result
-                                    score={score}
-                                    numberOfQuestions={numberOfQuestions}
-                                    timer={timer}
-                                    handleStop={handleEnd}
-                                    handleRestart={handleStop}
+          score={score}
+          numberOfQuestions={numberOfQuestions}
+          timer={timer}
+          handleStop={handleEnd}
+          handleRestart={handleStop}
         />}
         {!hasEnded && <button type='button' onClick={isStarted ? handleStop : handleStart} className={styles.startQuiz}>{isStarted ? "Stop" : "Start"} Quiz</button>}
-        {!isStarted && (
+        {/* {!isStarted && (
           <div className={styles.numberOfQuestions}>
             <h3>Number of questions</h3>
             <div>
@@ -82,7 +100,7 @@ function App() {
               ))}
             </div>
           </div>
-        )}
+        )} */}
       </main>
     </>
   )

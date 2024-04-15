@@ -28,13 +28,13 @@ const Question = ({ question, code, answers, correctAnswer, generateQuestion, ha
   return (
     <>
       <h2 className={styles.question}>{question}</h2>
-      <SyntaxHighlighter showLineNumbers customStyle={{
+      {code && <SyntaxHighlighter showLineNumbers customStyle={{
         width: "350px",
         border: "2px solid #102C57",
         height: "300px"
       }} language="python" style={docco}>
         {code}
-      </SyntaxHighlighter>
+      </SyntaxHighlighter>}
       {answers.map((answer, i) => (
         <button type='button' key={i} style={{
           border: `5px solid ${isAnswered ? (i + 1 === correctAnswer ? "#41B06E" : "#8B322C") : "#102C57"}`

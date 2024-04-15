@@ -8,7 +8,7 @@
       "HellodWorld",
       "Hello World"
     ],
-    "correctAnswer": 1
+    "correctAnswer": 2
   },
   {
     "question": "What is the output of the program below if the user enters 11?",
@@ -98,7 +98,7 @@
   },
   {
     "question": "What is the missing code that makes the program output 10?",
-    "code": "merchants = {\n\t\"Abdelhakim\": {\n\t\t\"number of peaches\": len([[10]*3]*5),\n\t\t\"number of apples\": 26",
+    "code": "merchants = {\n\t\"Abdelhakim\": {\n\t\t\"number of peaches\": len([[10]*3]*5),\n\t\t\"number of apples\": 26\n\t}\n}\nnumber_of_peaches = # Missing Code\nprint(number_of_peaches)",
     "answers": [
       "merchants[\"number of peaches\"] * 2",
       "merchants[\"Abdelhakim\"][\"number of apples\"] % 16",

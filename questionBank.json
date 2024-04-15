@@ -65,7 +65,7 @@
   },
   {
     "question": "What is the output of the following code?",
-    "code": "# final.txt:\n#MA9LOOBA\ndef f(f):\n\tf.read(1)\n\tf.read(2)\n\treturn f.read(3)\nprint(f(open(\"final.txt\")",
+    "code": "# final.txt:\n#MA9LOOBA\ndef f(f):\n\tf.read(1)\n\tf.read(2)\n\treturn f.read(3)\nprint(f(open(\"final.txt\")))",
     "answers": [
       "MA9",
       "OBA",
